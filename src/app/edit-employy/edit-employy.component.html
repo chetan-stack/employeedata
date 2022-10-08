@@ -1,25 +1,27 @@
-<form class="example-form" #formSubmit="ngForm" (ngSubmit)="submitForm(formSubmit)"> 
+<form class="example-form" #formSubmit="ngForm" (ngSubmit)="submitForm(formSubmit.value)"> 
     <h2>Edit Employee Details</h2>
     <div>
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Ex. Pizza" name="name" [ngModel]="detail.employee_name">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="Ex. Pizza" name="first_name" [ngModel]="detail.first_name">
     </mat-form-field>
     </div>
     <div>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Salary</mat-label>
-        <input matInput placeholder="Ex. Pizza" name="Salary" [ngModel]="detail.employee_salary">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Ex. Pizza" name="last_name" [ngModel]="detail.last_name">
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Age</mat-label>
-        <input matInput placeholder="Ex. Pizza" name="age" [ngModel]="detail.employee_age">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex. Pizza" name="email" [ngModel]="detail.email" type="email">
       </mat-form-field>
 </div>
+<mat-dialog-actions align="end">
 <button mat-raised-button color="primary">Submit</button>
-
+<button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
 <div>
  
 </div>

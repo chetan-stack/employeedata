@@ -1,0 +1,8 @@
+.image_av{
+    object-fit: cover;
+    height: 200px;
+}
+
+.image_av:hover{
+    transform: scale(1.1);
+}
